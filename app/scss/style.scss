@@ -3,15 +3,18 @@
 @import "null";
 @import "header";
 
+
 .container {
-   max-width: 1880px;
-   padding: 0 20px;
+   max-width: 1940px;
+   padding: 0 10px;
    margin: 0 auto;
 }
 
 a {
    color: white;
    font-family: "Roboto";
+   display: inline-block;
+   white-space: nowrap;
    & :active {
       color: white;
    }

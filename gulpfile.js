@@ -18,7 +18,6 @@ function cleanDist() {
 
 function scripts() {
     return src([
-        // "",
         "app/js/script.js"
     ])
     .pipe(concat("script.min.js"))

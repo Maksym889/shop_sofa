@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- <link rel="stylesheet" href="css/icons.css"> -->
     <title>Document</title>
 </head>
 <body>
    <header class="header">
       <div class="header__content">
          <div class="header__top container">
-            <div class="header__question">
-               <a href="#" class="header__advantages">Почему выбирают нас?</a>
-               <a href="#" class="header__chat">Вопрос-ответ</a>
-               <a href="#" class="header__experts">Советы экспертов</a>
-            </div>
+            <ul class="header__question-list">
+               <li class="header__question-item"><a href="#" class="header__advantages">Почему выбирают нас?</a></li>
+               <li class="header__question-item"><a href="#" class="header__chat">Вопрос-ответ</a></li>
+               <li class="header__question-item"><a href="#" class="header__experts">Советы экспертов</a></li>
+            </ul>
+            <div class="logo"><a class="logo-link" href="#">LOGO</a></div>
             <div class="header__contacts">
-               <a  class="phone" href="tel:0674002010">067 400 20 10</a>
-               <a  class="phone" href="tel:0674112111">067 411 21 11</a>
+               <div class="wrap-phone">
+                  <a  class="phone" href="tel:0674002010">067 400 20 10</a>
+                  <a  class="phone" href="tel:0674112111">067 411 21 11</a>
+               </div>
                <div class="head-button">
                   <a class="head-button__viber" href="#" >Написать на Viber</a>
                </div>
             </div>
          </div>
          <div class="header__bottom container">
-            <div class="logo"><a class="logo-link" href="#"><img src="/images/logo/logo_nova_mebel 1.png" alt="logo"></a></div>
             <nav class="nav">
                <ul class="nav__list">
                   <li class="nav__item"><a class="nav__item-link" href="#">Каталог</a></li>
@@ -39,8 +40,12 @@
                </ul>
             </nav>
             <div class="header__search">
-               <input class="header__input-field" type="text" name="" id="">
+               <form class="header__search-form" action="">
+                  <input class="header__input-field" type="text"  placeholder="Поиск..."name="" id="">
+                  <button class="header__input-batton" type="submit"></button>
+               </form>
             </div>
+            <a href="" class="header__busket-link"><img class="header__busket-img" src="/images/busket.svg" alt="busket"></a>
          </div>
       </div>
    </header>
