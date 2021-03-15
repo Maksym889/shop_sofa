@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap&subset=cyrillic-ext);
 @import "null";
 @import "header";
+@import "body";
 
 
 .container {
@@ -10,15 +11,7 @@
    margin: 0 auto;
 }
 
-a {
-   color: white;
-   font-family: "Roboto";
-   display: inline-block;
-   white-space: nowrap;
-   & :active {
-      color: white;
-   }
-}
+
 
 
 
