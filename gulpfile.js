@@ -18,6 +18,7 @@ function cleanDist() {
 
 function scripts() {
     return src([
+         "app/js/different/menu_burger.js",
         "app/js/script.js"
     ])
     .pipe(concat("script.min.js"))

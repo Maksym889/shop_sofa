@@ -93,6 +93,7 @@ body {
    align-items: center;
    flex-wrap: wrap;
 }
+
 .phone {
    margin-right: 15px;
 }
@@ -153,10 +154,14 @@ body {
    .header__top-dropdown {
       flex:0;
       display: inline-block;
+      position:relative;
+      z-index: 20;
    }
-   .header__top-dropdown:hover .header__question-list {
-      display: block;
-   }
+
+   // .header__top-dropdown:hover .header__question-list {
+   //    display: block;
+   // }
+
    .header__top-min {
       display: block;
       position: relative;
@@ -167,11 +172,15 @@ body {
    .header__question-list {
       display: none;
       position: absolute;
-      top: 9px;
+      top: 0px;
       padding-top: 36px;
       padding-left: 0;
       min-width: 160px;
-      z-index: 1;
+   }
+   .header__question-item {
+      background-color:  #3B3636;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      margin: 0;
       a {
          margin-left: 10px;
          color: white;
@@ -179,10 +188,6 @@ body {
          text-decoration: none;
          display: block;
       }
-   }
-   .header__question-item {
-      background-color:  #3B3636;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
    }
    .header__advantages {
 
@@ -207,18 +212,20 @@ body {
       display: flex;
       justify-content: flex-end;
    }
-   .header__contacts:hover .header__phone {
-      display: block;
-   }
+
+   // .header__contacts:hover .header__phone {
+   //    display: block;
+   // }
+   
    .header__phone {
       display: none;
       position: absolute;
       right: -5px;
-      top: 9px;
+      top: 0px;
       padding-top: 36px;
       padding-left: 0;
       min-width: 160px;
-      z-index: 1;
+      z-index: 3;
       a {
          margin-left: 10px;
          color: white;
@@ -243,7 +250,9 @@ body {
    .phone-min-img {
       display: block;
       position: relative;
-      z-index: 2;
+      z-index: 3;
+      width: 20px;
+      height: 20px;
    }
 }
 
@@ -259,6 +268,9 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   @media (max-width: 767px) {
+      min-height: 55px;
+   }
 }
 .menu {
    margin-right: 10px;
