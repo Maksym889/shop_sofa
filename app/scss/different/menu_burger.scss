@@ -40,6 +40,7 @@
 }
 
 @media (max-width: 767px) {
+  
   .menu {
     background-color: #3b3636;
     display: block;
@@ -121,18 +122,18 @@
 
   .body-menu {
     display: block;
-    justify-content: flex-end;
     position: absolute;
     z-index: 2;
     top: 0;
     left: -100%;
     max-width: none;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     flex: 0;
     background: #3b3636;
-    overflow: scroll;
+    overflow: auto;
     margin-top: 100px;
+    padding-bottom: 200px;
     transition: left 0.3s ease 0s;
   }
   .body-menu__title {
