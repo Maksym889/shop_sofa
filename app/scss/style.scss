@@ -4,6 +4,11 @@
 @import "header";
 @import "body";
 @import "different/menu_burger";
+@import "different/rating";
+
+@import "../../node_modules/swiper/components/navigation/navigation.scss";
+@import '../../node_modules/swiper/swiper.scss';
+
 
 
 $widthIPad: 767px;
@@ -18,6 +23,7 @@ $widthIPad: 767px;
 body {
    background: #E5E5E5;
 }
+
 
 
 

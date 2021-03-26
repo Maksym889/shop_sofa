@@ -10,6 +10,8 @@ const autoprefixer  = require("gulp-autoprefixer");
 const imagemin      = require("gulp-imagemin");
 const del           = require("del");
 const plumber       = require('gulp-plumber');
+const webpack       = require("webpack");
+const webpackStream = require("webpack-stream");
 
 
 function cleanDist() {
@@ -21,6 +23,28 @@ function scripts() {
          "app/js/different/menu_burger.js",
         "app/js/script.js"
     ])
+    .pipe(plumber())
+    .pipe(webpackStream({
+       output: {
+          filename: "script.js"
+       },
+       module: {
+         rules: [
+           {
+             test: /\.m?js$/,
+             exclude: /node_modules/,
+             use: {
+               loader: 'babel-loader',
+               options: {
+                 presets: [
+                   ['@babel/preset-env', { targets: "defaults" }]
+                 ]
+               }
+             }
+           }
+         ]
+       }
+    }))
     .pipe(concat("script.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
